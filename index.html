@@ -20,7 +20,13 @@
 			var n = Math.floor(Math.random()*3);
 			//遍历classmates数组
 			for (var i = 0; i < classmates.length; i++) {
+				var ary = [];
+				ary[ary.length] = n;
 				if (i == n) {
+					if (n == ary[i]) {
+						n = Math.floor(Math.random()*3);
+						return;
+					}
 					alert(classmates[i]);
 				}
 			}
