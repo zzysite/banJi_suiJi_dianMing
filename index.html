@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>班级随机点名程序</title>
+</head>
+<body>
+	<h1>班级随机点名程序</h1>
+	<hr />
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;这是一个能随机点名的程序</p>
+	<input type="button" value="开始随机点名" id="btn">
+	<script type="text/javascript">
+		//创建classmates数组
+		var classmates = ["小电视","22娘","33娘"];
+		//导入html按钮
+		var btn = document.getElementById("btn");
+		//执行按钮事件
+		btn.onclick = function(){
+			//创建随机数n
+			var n = Math.floor(Math.random()*3);
+			//遍历classmates数组
+			for (var i = 0; i < classmates.length; i++) {
+				if (i == n) {
+					alert(classmates[i]);
+				}
+			}
+		}
+	</script>
+</body>
+</html>
