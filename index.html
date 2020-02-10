@@ -6,7 +6,7 @@
 </head>
 <body>
 	<!--CopyRight (c) 钟致远电脑服务 2020-->
-	<!--Beta 2.0.2，如需详细信息请查看README.md文件或查看我的哔哩哔哩文章-->
+	<!--Beta 2.0.3，如需详细信息请查看README.md文件或查看我的哔哩哔哩文章-->
 	<!--HTML部分-->
 	<div id="container">
 		<div id="left">
@@ -90,8 +90,11 @@
 
 		//重置页面
 		resetProgram.onclick = function(){
-			//使用刷新方法，来清空数据
-			window.location.reload();
+			//确认用户是否手滑
+			var isUserCarefully = confirm("请问你确实点到了吗？");
+			if (isUserCarefully = true) {
+				window.location.reload();
+			}
 		};
 	</script>
 </body>
